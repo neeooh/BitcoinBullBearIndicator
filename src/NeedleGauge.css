@@ -1,0 +1,94 @@
+:root{
+    --rotation-degrees: 0;
+}
+
+.needle-gauge-indicator{
+    position: relative;
+    width: 308px;
+    margin: 20px 0;
+}
+.needle-gauge-indicator p {
+    margin: 40px 0 0 0;
+    font-size: 23px;
+}
+
+.border{
+    border: 10px solid dimgray;
+    width: 288px;
+    height: 200%;
+    border-radius: 360px;
+    position: absolute;
+}
+
+.scale-container {
+    position: absolute;
+    overflow: hidden;    
+}
+
+.scale-container .mask .background {
+    background-image: conic-gradient(from -90deg at 50% 50%, rgb(0 174 89) -180deg, rgb(169, 11, 23) 0deg, rgb(0 174 89) 180deg, rgb(169, 11, 23) 1turn);
+    height: 200%;
+    width: 100%;
+}
+
+.scale-container .mask {
+    mask: url("https://static.tradingview.com/static/bundles/gauge-small.9ecb810f3491735e20e3.svg");
+    width: 308px;
+    height: 154px;
+    -webkit-mask-size: 308px;
+    mask-size: 308px;
+    transform-origin: bottom;
+}
+
+.needle {
+    transform-origin: bottom;
+    position: relative;
+    top: 35px;
+    transform: rotate(calc(var(--rotation-degrees) - 90deg));
+}
+
+.mask {
+    transform: rotate(calc(var(--rotation-degrees) + 180deg));
+}
+
+.background {
+    transform: rotate(calc(var(--rotation-degrees)*(-1) + 180deg));
+}
+
+
+/* ANIMATIONS */
+
+.animated .needle {
+    animation: arrow-transform 3s infinite;
+}
+@keyframes arrow-transform {
+    0% {transform:rotate(calc(var(--rotation-degrees) - 90deg))}
+    50%{transform:rotate(calc(1deg + var(--rotation-degrees) - 90deg))}
+    75%{transform:rotate(calc(-1deg + var(--rotation-degrees) - 90deg))}
+    to{transform:rotate(calc(var(--rotation-degrees) - 90deg))}
+}
+
+.animated .mask {
+    animation: mask-transform 3s infinite;
+}
+@keyframes mask-transform {
+    0% {transform:rotate(calc(var(--rotation-degrees) - 180deg))}
+    50%{transform:rotate(calc(1deg + var(--rotation-degrees) - 180deg))}
+    75%{transform:rotate(calc(-1deg + var(--rotation-degrees) - 180deg))}
+    to{transform:rotate(calc(var(--rotation-degrees) - 180deg))}
+}
+
+.animated .background {
+    animation: background-transform 3s infinite;
+}
+@keyframes background-transform {
+    0% {transform:rotate(calc(var(--rotation-degrees)*(-1) - 180deg))}
+    50%{transform:rotate(calc(1deg + var(--rotation-degrees)*(-1) - 180deg))}
+    75%{transform:rotate(calc(-1deg + var(--rotation-degrees)*(-1) - 180deg))}
+    to{transform:rotate(calc(var(--rotation-degrees)*(-1) - 180deg))}
+}
+
+
+.needle, .background, .mask {
+    transition: transform .7s cubic-bezier(1, 0, 0.1, 1.22);
+}

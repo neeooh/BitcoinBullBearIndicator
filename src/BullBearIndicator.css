@@ -1,0 +1,36 @@
+.bull-bear-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    margin: 10px 0;
+}
+
+.timescale button{
+    background: none;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+.timescale button:hover{
+    background-color: lightgrey;
+    color: black;
+    border-radius: 6px;
+}
+
+.timescale button.active{
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.dev-tools {
+    display: flex;
+    flex-direction: column;
+}
