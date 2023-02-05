@@ -16,7 +16,7 @@ interface ApiData {
 
 function BullBearIndicator() {
 
-    const [score, setScore] = useState(50); // 50 is a 'neutral' result, between 0 and 100. Neither Bearish not Bullish.
+    const [score, setScore] = useState(0); // Score is between 0 (most bearish) and 100 (most bullish).
     const [timeframe, setTimeframe] = useState(1); // 1 day default
 
 
@@ -59,6 +59,12 @@ function BullBearIndicator() {
         console.log(`timeframe changed to: ${timeframe}, calling  fetch!`);
 
         fetchData(timeframe);
+
+        // Dev purposed only
+        // setTimeout(() => {
+        //     setScore(33);
+        // }, 2000)
+
    }, [timeframe])
 
     return (
