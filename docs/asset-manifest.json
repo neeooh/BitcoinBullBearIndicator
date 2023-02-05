@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.40812978.css",
-    "main.js": "/static/js/main.ad0a26ef.js",
-    "static/js/787.dc7cb7b0.chunk.js": "/static/js/787.dc7cb7b0.chunk.js",
-    "index.html": "/index.html",
-    "main.40812978.css.map": "/static/css/main.40812978.css.map",
-    "main.ad0a26ef.js.map": "/static/js/main.ad0a26ef.js.map",
-    "787.dc7cb7b0.chunk.js.map": "/static/js/787.dc7cb7b0.chunk.js.map"
+    "main.css": "/BitcoinBullBearIndicator/static/css/main.40812978.css",
+    "main.js": "/BitcoinBullBearIndicator/static/js/main.f0ebbedf.js",
+    "static/js/787.dc7cb7b0.chunk.js": "/BitcoinBullBearIndicator/static/js/787.dc7cb7b0.chunk.js",
+    "index.html": "/BitcoinBullBearIndicator/index.html",
+    "main.40812978.css.map": "/BitcoinBullBearIndicator/static/css/main.40812978.css.map",
+    "main.f0ebbedf.js.map": "/BitcoinBullBearIndicator/static/js/main.f0ebbedf.js.map",
+    "787.dc7cb7b0.chunk.js.map": "/BitcoinBullBearIndicator/static/js/787.dc7cb7b0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.40812978.css",
-    "static/js/main.ad0a26ef.js"
+    "static/js/main.f0ebbedf.js"
   ]
 }
